@@ -6,12 +6,13 @@
     "id": "cordovarduino",
     "platforms": [
       "android",
+      "electron",
       "ubuntu"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xseignard/cordovarduino.git"
+    "url": "git+https://github.com/Sotilrac/cordovarduino.git"
   },
   "keywords": [
     "serial",
@@ -20,10 +21,13 @@
     "cordova-android",
     "cordova-ubuntu"
   ],
-  "author": "Xavier Seignard <xavier.seignard@gmail.com>",
+  "author": "Carlos Asmat <carlos.asmat@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xseignard/cordovarduino/issues"
+    "url": "https://github.com/Sotilrac/cordovarduino/issues"
   },
-  "homepage": "https://github.com/xseignard/cordovarduino#readme"
+  "homepage": "https://github.com/Sotilrac/cordovarduino#readme",
+  "dependencies": {
+    "serialport": "^8.0.5"
+  }
 }

@@ -8,13 +8,12 @@
     <license>MIT</license>
     <keywords>serial,arduino</keywords>
 
-    <!-- js module -->
-    <js-module src="www/serial.js" name="Serial">
-        <clobbers target="window.serial" />
-    </js-module>
-
     <!-- android -->
     <platform name="android">
+        <!-- js module -->
+        <js-module src="www/serial.js" name="Serial">
+            <clobbers target="window.serial" />
+        </js-module>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Serial">
                 <param name="android-package" value="fr.drangies.cordova.serial.Serial"/>
@@ -27,7 +26,19 @@
 
     <!-- ubuntu -->
     <platform name="ubuntu">
+        <!-- js module -->
+        <js-module src="www/serial.js" name="Serial">
+            <clobbers target="window.serial" />
+        </js-module>
         <header-file src="src/ubuntu/serial.h" />
         <source-file src="src/ubuntu/serial.cpp" />
+    </platform>
+
+    <!-- electron -->
+    <platform name="electron">
+        <!-- js module -->
+        <js-module src="www/electron-serial.js" name="Serial">
+            <clobbers target="window.serial" />
+        </js-module>
     </platform>
 </plugin>
